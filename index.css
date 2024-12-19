@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    
+}
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+ background-color: aliceblue;
+  overflow-x: hidden;
+  color: black;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40%;
+}
+
+header {
+  width: 100%;
+  padding: 10px 20px;
+   
+  align-items: center;
+
+}
+
+header .logo {
+  font-size: 24px; 
+  color: #6c63ff;
+  align-content: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-content: center;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #000000;
+  
+}
+header a:hover{
+    color: blue;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+
+  color: white;
+}
+
+.hero .content {
+  max-width: 50%;
+}
+
+.hero .content h1 {
+  font-size: 48px;
+}
+
+
+.hero .buttons button {
+  background-color: #fff;
+  color: #6c63ff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.hero .buttons button:hover {
+  transform: scale(1.05);
+  color: blue;
+}
+
+.hero .image img {
+  max-width: 400px;
+  border-radius: 10px;
+  animation-name: circleani;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+   
+}
+.buttons{
+    margin-top: 30%;
+}
+.content h1{
+    color: #0934c2;
+}
+.content h1 span{
+    color: black;
+}
+.content p{
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.circle{
+    width: 8vw;
+    height: 10vh;
+    position: absolute;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,98,1) 0%, rgba(163,50,191,1) 59%, rgba(231,0,255,1) 100%);
+    border-radius: 50%;
+    top: 40%;
+    left: 0%;
+    animation-name: circleani;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+    z-index: -10;
+}
+.circle1{
+    width: 28vw;
+    height: 30vh;
+    position: absolute;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,98,1) 0%, rgba(163,50,191,1) 59%, rgba(231,0,255,1) 100%);
+    border-radius: 50%;
+    top: 10%;
+    right: 20%;
+   animation-name: circleani;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+    z-index: -10;
+}
+@keyframes circleani{
+    
+    50%{
+        transform: translateY(20%);
+    }
+}
+/* about  */
+.about-section {
+    background: aliceblue;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about-section {
+    background: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid #2575fc;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 1rem;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #2575fc;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.about-content {
+    max-width: 600px;
+    margin: 0 1rem;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #2575fc;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+/* Existing styles remain unchanged above */
+
+/* Add responsive design */
+@media (max-width: 1024px) {
+    .container {
+      margin-left: 10%; /* Adjust for medium screens */
+    }
+  
+    .hero .content h1 {
+      font-size: 36px; /* Reduce font size */
+    }
+  
+    .hero .image img {
+      max-width: 300px; /* Shrink image for medium screens */
+    }
+  
+    .profile-img {
+      width: 250px;
+      height: 250px; /* Smaller profile image */
+    }
+  
+    .about-container {
+      flex-direction: column; /* Stack items for better flow */
+      text-align: center;
+    }
+  
+    .about-content {
+      margin: 20px 0; /* Add spacing */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header ul {
+      flex-direction: column; /* Stack navigation links */
+      gap: 10px;
+    }
+  
+    .hero {
+      flex-direction: column; /* Stack content for smaller screens */
+      padding: 20px;
+    }
+  
+    .hero .content h1 {
+      font-size: 28px; /* Further reduce font size */
+    }
+  
+    .hero .buttons {
+      margin-top: 10%;
+    }
+  
+    .profile-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header .logo {
+      font-size: 18px; /* Smaller logo font */
+    }
+  
+    header ul {
+      gap: 5px;
+    }
+  
+    .hero .content h1 {
+      font-size: 24px; /* Mobile-friendly font size */
+    }
+  
+    .hero .image img {
+      max-width: 200px;
+    }
+  
+    .profile-img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .about-content {
+      font-size: 0.9rem; /* Smaller text */
+    }
+  }
+  /* education */
+  /* General Reset */
+
+.education-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: rgb(228, 228, 228);
+}
+
+.education-section h2 {
+  font-size: 2.5rem;
+  color: #9239e6;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #39e6e3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+  padding: 1rem;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item .content {
+  background: #cf1b9f;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50px;
+  position: relative;
+
+}
+
+.timeline-item .content:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: #e63946;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left .content:before {
+  right: -8px;
+}
+
+.timeline-item.right .content:before {
+  left: -8px;
+}
+
+.timeline-item.left .content {
+  margin-right: 2rem;
+}
+
+.timeline-item.right .content {
+  margin-left: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-item {
+      width: 100%;
+      text-align: center;
+  }
+
+  .timeline-item.left .content, .timeline-item.right .content {
+      margin: 0;
+  }
+
+  .timeline:before {
+      left: 2rem;
+  }
+}
+/* Existing styles remain unchanged above */
+
+/* Glowing Timeline Dots */
+.timeline-item .content:before {
+  box-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946;
+  }
+  50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px #ff4d6d, 0 0 30px #ff4d6d, 0 0 40px #ff4d6d;
+  }
+  100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946;
+  }
+}
+
+/* Slide-In Animations */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.timeline-item.left {
+  transform: translateX(-50px);
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Content Hover Effects */
+.timeline-item .content {
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.timeline-item .content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4);
+}
+
+/* Background Animation */
+.education-section {
+  background: linear-gradient(120deg, #1a1a1a, #2b2b2b);
+  animation: backgroundScroll 10s infinite alternate;
+}
+
+@keyframes backgroundScroll {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
